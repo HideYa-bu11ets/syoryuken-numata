@@ -32,13 +32,16 @@ class ViewController: UIViewController {
     
     @IBAction func attackBtn(_ sender: UIButton) {
         for i in 0..<attackArray.count {
+
+    
             let delay = Double(i) * 0.1
+            print(delay)
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                 self.displayImage(withName: self.attackArray[i])
                 
-            }
+            }            
         }
-        displayImage(withName: attackArray[imageCount-1])
+        displayImage(withName: attackArray[0])
         
     }
     
